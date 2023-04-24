@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Streaming Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Video Streaming Website</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="add-video">
+                <h2>Add Video</h2>
+                <form method="post" action="/add" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" placeholder="Enter video title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" placeholder="Enter video description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="video-file">Video File</label>
+                        <input type="file" id="video-file" name="video_file" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Video</button>
+                </form>
+            </section>
+            <section class="video-list">
+                <h2>Video List</h2>
+                {% for video in videos %}
+                    <article class="video">
+                        <h3>{{ video[1] }}</h3>
+                        <p class="description">{{ video[2] }}</p>
+                        <video src="{{ video[3] }}" controls></video>
+                        <form method="post" action="/delete/{{ video[0] }}">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </article>
+                {% endfor %}
+            </section>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Form styles */
+.add-video {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 30px;
+}
+
+.add-video h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input[type="text"], textarea, input[type="file"] {
+    background-color: #f7f7f7;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    padding: 15px;
+    width: 100%;
+}
+
+textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px 30px;
+}
+
+button[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* Video styles */
+.video-list {
+    margin-bottom: 40px;
+}
+
+.video {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 30px;
+    position: relative;
+}
+
+.video h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.video p.description {
+    margin-bottom: 20px;
+}
+
+video {
+    border-radius: 5px;
+    display: block;
+    height: 400px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.btn {
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    border: none;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+.btn-primary {
+    background-color: #333;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #444;
+}
